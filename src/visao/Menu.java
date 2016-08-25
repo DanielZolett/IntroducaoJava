@@ -14,22 +14,27 @@ import java.util.Scanner;
 public class Menu {
     
     public static void exibirMenu(){
-        System.out.println("geri geri Menu geri geri ");
+        System.out.println("@@@@@@@ Menu @@@@@@@");
+        System.out.println("^^^^^^ Iluminate ^^^^^^");
         System.out.println("Seleção de obção ");
         System.out.println("1) Cadastro de quipamento ");
         System.out.println("2) Lista de equipamentos ");
         System.out.println("O que voce quer ");
         
         Scanner entrada = new Scanner (System.in);
+        int opcao = 0;
         
-        try{
-            int opcao = entrada.nextInt();
-            System.out.println(" o usuario digitou: " + opcao);
-        }catch(Exception e){
-            System.out.println("charmaqnder " + e.getClass());
-        }
-        
-        
+        do{
+            try{
+                opcao = Integer.parseInt(entrada.nextLine());
+                System.out.println("O usuario digitou: " + opcao);                
+            }catch(Exception e){
+                System.out.println("Não deu certo. Informe outro ");
+            }
+        }while(opcao != 1 && opcao != 2);
+        if (opcao == 1){
+            EquipamentoVisao.exibirFormLariCadastroEquipamento();
+        }      
     
     }
     
