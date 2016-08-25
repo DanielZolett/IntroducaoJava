@@ -26,7 +26,7 @@ public class Menu {
             int opcao = entrada.nextInt();
             System.out.println(" o usuario digitou: " + opcao);
         }catch(Exception e){
-            System.out.println("cha de se burro muleke " + e.getClass());
+            System.out.println("charmaqnder " + e.getClass());
         }
         
         
