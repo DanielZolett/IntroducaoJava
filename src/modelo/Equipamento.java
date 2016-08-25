@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import armazenamento.meioArmazenamento;
 import java.util.Date;
 
 /**
@@ -17,7 +18,7 @@ public class Equipamento {
     private float valor;
     
     public void salvar(){
-        meioArmazenamento.MEIO_ARMAZENAMENTO_EQUIPAMENTOS.add(this)
+        meioArmazenamento.MEIO_ARMAZENAMENTO_EQUIPAMENTOS.add(this);
     }
 
     /**
