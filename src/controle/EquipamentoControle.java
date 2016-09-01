@@ -8,6 +8,7 @@ package controle;
 import java.util.ArrayList;
 import java.util.Date;
 import modelo.Equipamento;
+import modelo.Munutencao;
 
 /**
  *
@@ -29,5 +30,16 @@ public class EquipamentoControle {
     
     public static Equipamento obterEquipamentoPeloNumeroDoPatrimonio(String numeroPatrimonio){
         return Equipamento.obterPeloNumero(numeroPatrimonio);
+    }
+    
+    public static void receberDadosNovaManutencao(String numeroPatrimonio, String descricao, Date data, float valor){
+        Equipamento encontrado = Equipamento.obterPeloNumero(numeroPatrimonio);
+        Munutencao novaManutencao = new Munutencao();
+        novaManutencao.setData(data);
+        novaManutencao.setDescricao(descricao);
+        novaManutencao.setValor(valor);       
+        encontrado.adicionaManutencao(novaManutencao);
+        //encontrado.salvar();
+        //método salvar não necessário por enquanto pois, como os dados estão em memória, o próprio objeto manipulado é o mesmo do meio de armazenamento
     }
 }

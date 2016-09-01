@@ -86,7 +86,7 @@ public class EquipamentoVisao {
                 System.out.println("ERRO: Não encontrado");
                 Menu.exibirMenu();
             }else{
-                
+                MunutencaoVisao.exibirFormularioCadastroManutencao(valorDigitado);                                                  
             }
         }
         
